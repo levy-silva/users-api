@@ -1,6 +1,5 @@
 import "dotenv/config";
 import app from "./app";
+import { PORT } from "./config/constants";
 
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
+app.listen(PORT || 8080, () => console.log(`Server running at port ${PORT}`));
